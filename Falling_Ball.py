@@ -12,13 +12,19 @@ def reset_world():
     global grass
     grass = Grass()
 
+    global balls
+    balls = [Ball() for i in range(20)]
+
 
 def update_world():
-    pass
+    for ball in balls:
+        ball.update()
 
 def render_world():
     clear_canvas()
     grass.draw()
+    for ball in balls:
+        ball.draw()
     update_canvas()
 
 
