@@ -18,6 +18,16 @@ class Ball:
         self.x = random.randint(0, 800 - self.size)
         self.y = 599
 
+    def update(self):
+        if self.y - self.size > 30:
+            y = self.y - 10
+        else:
+            y = 30 + self.size
+        self.y = y
+
+    def draw(self):
+        self.image.draw(self.x + self.size // 2, self.y + self.size // 2, self.size, self.size)
+
 def reset_world():
     global grass
     grass = Grass()
