@@ -18,9 +18,11 @@ class Ball:
         self.x = random.randint(0, 800 - self.size)
         self.y = 599
 
+        self.speed = random.randint(5, 10)
+
     def update(self):
         if self.y > 40:
-            y = self.y - 10
+            y = self.y - self.speed
         else:
             y = 40
         self.y = y
