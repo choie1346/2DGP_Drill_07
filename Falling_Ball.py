@@ -19,10 +19,10 @@ class Ball:
         self.y = 599
 
     def update(self):
-        if self.y - self.size > 30:
+        if self.y > 40:
             y = self.y - 10
         else:
-            y = 30 + self.size
+            y = 40
         self.y = y
 
     def draw(self):
