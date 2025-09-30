@@ -8,6 +8,16 @@ class Grass:
     def draw(self):
         self.image.draw(400, 30)
 
+class Ball:
+    def __init__(self):
+        self.size = random.randint(1, 2) * 30
+        if self.size == 30:
+            self.image = load_image('ball21x21.png')
+        else:
+            self.image = load_image('ball41x41.png')
+        self.x = random.randint(0, 800 - self.size)
+        self.y = 599
+
 def reset_world():
     global grass
     grass = Grass()
